@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+@font-face{
+	src: url("../fonts/Avenir-BlackOblique-04.ttf");
+	font-family: blackoblq;
+}
+
+@font-face{
+    src: url("../fonts/Avenir-Medium-09.ttf");
+    font-family:aveMed;
+}
+
+a[href^=tel] {
+    text-decoration:inherit;
+    color: inherit;
+ }
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+}
+
+
+/* DESKTOP PRODUCT-MAIN PAGE */
+
+.productmain-bg{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/productmainBG.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    position: relative;
+    display: flex;
+}
+
+.atlogo-productmain{
+    position: absolute;
+    margin: 20px 40px;
+    left: 0px;
+}
+
+.atlogo-productmain img{
+    height: 6vmax;
+
+}
+
+.productmaincontent-container{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 35%;
+    align-self: center;
+    position: absolute;
+    right: 5%;
+}
+
+.productmain-text{
+    height: 20%;
+}
+
+.productmain-text h1{
+    color: #F0E04E;
+    font-family: blackoblq;
+    text-align: center;
+    font-size: 2.5vmax;
+}
+
+.productmain-welogo{
+    display: flex;
+    height: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.productmain-welogo img{
+    height: 6vmax;
+}
+
+.productmainbutton-container{
+    display: flex;
+    height: 30%;
+    justify-content: center;
+}
+
+.productmain-button{
+    display: flex;
+    width: 8vmax;
+    height: 2.5vmax;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    color: #1c4e7e;
+    cursor: pointer;
+}
+
+.productmain-button:hover{
+    background-color: #F0E04E;
+}
+
+.productmain-button span{
+    font-family: blackoblq;
+    font-size: 1vmax;
+}

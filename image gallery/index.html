@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Image Slider Toggle Button</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    </head>
+    <body>
+        <div class="content">
+            <div class="images">
+                <img src="Eren.jpg">
+                <img src="Mikasa.jpg">
+                <img src="tr3.jpg">
+                <img src="tr2.jpg">
+                <img src="tr1.png">
+            </div>
+
+            <div onclick="side_slide(-1)" class="slide left">
+                <span class="fas fa-angle-left"></span>
+            </div>
+
+            <div onclick="side_slide(1)" class="slide right">
+                <span class="fas fa-angle-right"></span>
+            </div>
+
+            <div class="btn-sliders">
+                <span onclick="btn_slide(1)"></span>
+                <span onclick="btn_slide(2)"></span>
+                <span onclick="btn_slide(3)"></span>
+                <span onclick="btn_slide(4)"></span>
+                <span onclick="btn_slide(5)"></span>
+            </div>
+        </div>
+
+        <script>
+            var indexValue = 1;
+            showImg(indexValue);
+            function btn_slide(e){showImg(indexValue = e);}
+            function side_slide(e){showImg(indexValue += e);}
+            function showImg(e){
+                var i;
+                const img = document.querySelectorAll('img');
+                const sliders = document.querySelectorAll('.btn-sliders span');
+                if(e > img.length){indexValue = 1}
+                if (e < 1){indexValue = img.length}
+                for (i = 0; i < img.length; i++){
+                    img[i].style.display = "none";
+                }
+                for (i = 0; i < sliders.length; i++){
+                    sliders[i].style.background = "rgba(255,255,255,0.1)";
+                }
+                img[indexValue-1].style.display = "block";
+                sliders[indexValue-1].style.background = "white";
+            }
+        </script>
+
+        
+    </body>
+</html>

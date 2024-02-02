@@ -1,0 +1,173 @@
+@charset "UTF-8";
+
+@font-face{
+	src: url("../fonts/Avenir-BlackOblique-04.ttf");
+	font-family: blackoblq;
+}
+
+@font-face{
+    src: url("../fonts/Avenir-Medium-09.ttf");
+    font-family: aveMed;
+}
+
+a[href^=tel] {
+    text-decoration:inherit;
+    color: inherit;
+ }
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+}
+
+
+/* DESKTOP ABOUT US */
+
+.aboutUs-bg{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/aboutUSbg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+}
+
+.back-container{
+    display: flex;
+    align-items: center;
+    width: 12vmax;
+    height: fit-content;
+    position: absolute;
+    float:left;
+    top: 40px;
+    left: 20px;
+    justify-content:space-evenly;
+    cursor: pointer;
+}
+
+.back-container h1{
+    font-family: aveBook;
+    color: #1c4e7e;
+    font-weight: lighter;
+    font-size: 2.5vmax;
+}
+
+.back-container img{
+    height: 5vmax;
+}
+
+.back-container h1:hover{
+    color: #F0E04D;
+}
+
+
+.aboutalltimetext-container{
+    width: 95%;
+    align-self: center;
+    height: fit-content;
+}
+
+.aboutalltimetext-container p{
+    color: #1c4e7e;
+    font-family: aveMed;
+    text-align: center;
+    font-size: 4vmax;
+}
+
+.mvv-background{
+    height: 100vh;
+    width: 100%;
+}
+
+.mvvflex-container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.mvvflex{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+#mvvflextopmid{
+    border-left: 10px solid #1c4e7e;
+    border-right: 10px solid #1c4e7e;
+}
+
+.mvvflextop{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.mvvflexbottom{
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1c4e7e;
+    text-align: center;
+    font-family: aveMed;
+    font-size: 1.5vmax;
+}
+
+.mvvflextopimgcont{
+    display: flex;
+    width: 100%;
+    height: 80%;
+    align-items: center;
+    justify-content: center;
+}
+
+.mvvflextopimgcont img{
+    height: 10vmax;
+}
+
+.mvvflextoptitle{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5vmax;
+    font-family: blackoblq;
+}
+@media screen and (max-width: 516px){
+.aboutUs-bg{
+        width: 100%;
+        height: 100vh;
+        background-image: url("../img/mob/aboutUsmob.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        justify-content: center;       
+}
+
+.mvvflex-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+#mvvflextopmid{
+    border-left: none;
+    border-right: none;
+}
+}

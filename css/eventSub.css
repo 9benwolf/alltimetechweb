@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+@font-face{
+	src: url("../fonts/Avenir-MediumOblique-10.ttf");
+	font-family: medoblq;
+}
+
+@font-face{
+    src: url("../fonts/Avenir-BlackOblique-04.ttf");
+    font-family:blackoblq;
+}
+
+a[href^=tel] {
+    text-decoration:inherit;
+    color: inherit;
+ }
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+}
+
+
+/* DESKTOP EVENTSUB US */
+
+.eventsub-bg{
+    background-image: url("../img/eventSub.png");
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.back-container{
+    display: flex;
+    align-items: center;
+    width: 12vmax;
+    height: fit-content;
+    position: absolute;
+    float:left;
+    top: 40px;
+    left: 20px;
+    justify-content:space-evenly;
+    cursor: pointer;
+}
+
+.back-container h1{
+    font-family: aveBook;
+    color: #1c4e7e;
+    font-weight: lighter;
+    font-size: 2.5vmax;
+}
+
+.back-container img{
+    height: 5vmax;
+}
+
+.back-container h1:hover{
+    color: #F0E04D;
+}
+
+.button-container a{
+    text-decoration: none;
+}
+
+@media screen and (max-width: 516px){
+.eventsub-bg{
+    background-image: url("../img/mob/eventSub.png");
+    height: 100vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    }
+
+
+}

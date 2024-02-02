@@ -1,0 +1,746 @@
+@charset "UTF-8";
+
+@font-face{
+	src: url("../fonts/Avenir-BlackOblique-04.ttf");
+	font-family: blackoblq;
+}
+
+@font-face{
+	src: url("../fonts/Avenir-MediumOblique-10.ttf");
+	font-family: medoblq;
+}
+
+@font-face{
+    src: url("../fonts/Avenir-Medium-09.ttf");
+    font-family:aveMed;
+}
+
+@font-face{
+	src: url("../fonts/Avenir-Book-01.ttf");
+	font-family: aveBook;
+}
+
+a[href^=tel] {
+    text-decoration:inherit;
+    color: inherit;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    text-align: center;
+}
+
+.content{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.content .images{
+    height: 100%;
+    width: 100%;
+}
+
+.btn-sliders{
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    display: flex;
+    transform: translateX(-50%);
+}
+
+.btn-sliders span{
+    height: 25px;
+    width: 25px;
+    border: 2px solid #F0E04E;
+    border-radius: 25px;
+    margin: 0 3px;
+    cursor: pointer;
+}
+
+.content .slide{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    background: rgba(255,255,255,0.1);
+    cursor: pointer;
+    border: 2px solid #F0E04E;
+    border-radius: 25px;
+}
+
+.content .slide:hover{
+    background: rgba(255,255,255,0.2);
+}
+
+.slide span{
+    font-size: 35px;
+    color: #F0E04E;
+    line-height: 41px;
+}
+
+.content .right{
+    right: 0;
+}
+
+
+/* NAV BUTTON CSS */
+
+#menu{
+    float: right;
+    height: 2.5vmax;
+    width: 5vmax;
+    margin: 40px 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bar{
+    height: 0.5vmax;
+    background-color: white;
+    display: block;
+    border-radius: 5px;
+    transition: 0.4s ease;
+}
+
+#bar1{
+    width: 100%;
+    transform: translateY(-0.4vmax);
+}
+
+#bar2{
+    width: 80%;
+}
+
+#bar3{
+    width: 40%;
+    transform: translateY(0.4vmax);
+}
+
+.navigation li a{
+    color: black;
+    text-decoration: none;
+    font-family: blackoblq;
+    font-size: 2vmax;
+}
+
+.navigation li a:hover{
+    font-weight: bold;
+    font-size: 2.5vmax;
+    color: #1c4e7e;
+}
+
+.navigation li{
+    list-style: none;
+    padding: 0.5vmax 0;
+    text-align: center;
+}
+
+.navigation{
+    margin: 40px 20px;
+    width: 15vmax;
+    display: none;
+    position: absolute;
+    right: 0.5vmax;
+    top: 4vmax;
+    font-size: 0vmax;
+    transition: 0.4s ease;
+}
+
+#menu-bar{
+    z-index: 2;
+    position: absolute;
+    right: 0px;
+}
+
+.menu-bg{
+    z-index: 1;
+    top: 0.5vmax;
+    right: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, #f0e04e, #f0e04e);
+    border-radius: 20px;
+    transition: 0.4s ease;
+}
+
+.change-bg{
+    width: 18vmax;
+    height: 28vmax;
+}
+
+.change .bar{
+    background-color: black;
+}
+
+.change #bar1{
+    transform: translateY(0.6vmax) rotateZ(-45deg);
+}
+
+.change #bar3{
+    width: 100%;
+    transform: translateY(-0.5vmax) rotate(45deg);
+}
+
+.change #bar2{
+    opacity: 0;
+}
+
+.change{
+    display: block;
+    font-size: 2.5vmax;
+}
+
+/* ABOUT MAIN WEB */
+
+.aboutmain-bg{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/aboutmainbg.png");
+    background-size: cover;
+    display: flex;
+    position: relative;
+}
+
+.aboutmain-container{
+    width: 70%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 6%;
+    position: absolute;
+    top: 40%;
+}
+
+.aboutmaintext-container{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.aboutmaintext-container p{
+    font-family: aveMed;
+    color: #f0e04d;
+    font-size: 4vmax;
+}
+
+.att-logo{
+    height: fit-content;
+    width: fit-content;
+    position: absolute;
+    margin: 40px 20px;
+    z-index: 1;
+}
+
+.att-logo img{
+    height: 6vmax;
+}
+
+.aboutmainbutton-container{
+    height: 20%;
+    display: flex;
+    width: 70%;
+    justify-content: center;
+    margin-left: 15%;
+}
+
+.aboutmain-button{
+    text-decoration: none;
+    display: flex;
+    background-color: white;
+    width: 8vmax;
+    height: 2vmax;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    margin-top: 1vmax;
+    cursor: pointer;
+    color: #1c4e7e;
+}
+
+.aboutmain-button:hover{
+    background-color: #1c4e7e;
+    color: white;
+}
+
+.aboutmain-button span{
+    font-family: blackoblq;
+    font-size: 1vmax;
+    word-spacing: 5px;
+}
+
+/* ABOUT MAIN WEB END*/
+
+/* PRODUCT MAIN WEB */
+.productmain-bg{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/productmainBG.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+    position: relative;
+    display: flex;
+}
+
+.atlogo-productmain{
+    position: absolute;
+    margin: 40px 20px;
+    left: 0px;
+}
+
+.atlogo-productmain img{
+    height: 6vmax;
+
+}
+
+.productmaincontent-container{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 35%;
+    align-self: center;
+    position: absolute;
+    right: 5%;
+}
+
+.productmain-text{
+    height: 20%;
+}
+
+.productmain-text h1{
+    color: #F0E04E;
+    font-family: blackoblq;
+    text-align: center;
+    font-size: 2.5vmax;
+}
+
+.productmain-welogo{
+    display: flex;
+    height: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.productmain-welogo img{
+    height: 6vmax;
+}
+
+.productmainbutton-container{
+    display: flex;
+    height: 30%;
+    justify-content: center;
+}
+
+.productmainbutton-container a{
+    text-decoration: none;
+}
+
+.productmain-button{
+    display: flex;
+    width: 8vmax;
+    height: 2.5vmax;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    color: #1c4e7e;
+    cursor: pointer;
+}
+
+.productmain-button:hover{
+    background-color: #F0E04E;
+}
+
+.productmain-button span{
+    font-family: blackoblq;
+    font-size: 1vmax;
+}
+
+/* PRODUCT MAIN WEB END */
+
+/* SERVICES MAIN WEB */
+
+.services-bg{
+    background-image: url("../img/servicesBG.png");
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    display: flex ;
+    justify-content: center;
+    position: relative;
+}
+
+.sertexmob2{
+    display: none;
+}
+
+.attblacklogo{
+    position: absolute;
+    left: 0;
+    display: flex;
+    margin: 40px 20px;
+}
+
+.attblacklogo img{
+    height: 6vmax;
+}
+
+.stb-container{
+    height: 25%;
+    width: 90%;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.servicetext-container h1{
+    color: #414042;
+    font-family: medoblq;
+    text-align: center;
+    font-size: 3.5vmax;
+    word-spacing: 5px;
+}
+
+.servicebutton-container{
+    display: flex;
+    justify-content: center;
+}
+
+.service-button{
+    text-decoration: none;
+    display: flex;
+    background-color: #1c4e7e;
+    color: #F0E04D;
+    font-family: blackoblq;
+    width: 10vmax;
+    height: 3vmax;
+    justify-content: center;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.service-button:hover{
+    background-color: #F0E04D;
+    color: #1c4e7e;
+}
+
+.service-button span{
+    font-size: 1.5vmax;
+    align-self: center;
+}
+
+/* SERVICES MAIN WEB END */
+
+/* EVENT MAIN WEB */
+
+.event-bg{
+    height: 100vh;
+    width: 100%;
+    background-image: url("../img/eventsBG.png");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.etb-container{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 40%;
+    align-self: center;
+}
+
+.et{
+    display: flex;
+    justify-content: center;
+}
+
+.et h1{
+    text-align: center;
+    color: #1c4e7e;
+    font-family: medoblq;
+    letter-spacing: 5px;
+    height: max-content;
+    font-size: 3vmax;
+    font-weight: lighter;
+}
+
+.button-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.button-container a{
+    text-decoration: none;
+}
+
+.event-button{
+    display: flex;
+    background-color: #1c4e7e;
+    color: #F0E04D;
+    font-family: blackoblq;
+    width: 10vmax;
+    height: 3vmax;
+    justify-content: center;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.event-button:hover{
+    background-color: #F0E04D;
+    color: #1c4e7e;
+}
+
+.event-button span{
+    font-size: 1.5vmax;
+    align-self: center;
+}
+
+/* EVENT MAIN WEB END*/
+
+/* CONTACT MAIN WEB*/
+
+.contact-container{
+    background-image: url("../img/contactUSbg.png");
+    background-size:cover;
+    background-repeat: no-repeat;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+}
+
+.contactgrid-container{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 70%;
+    align-self: center;
+}
+
+.title-container{
+    display: flex;
+    justify-content: center;;
+}
+
+.title-container h1{
+    color: #1c4e7e;
+    font-size: 5vmax;
+    font-family: blackoblq;
+}
+
+.congrid-section{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-self: center;
+}
+
+.contact-grid{
+    display: grid;
+    grid-template-row: 33.3% 33.3% 33.3%;
+    width: 55%;
+
+}
+
+.contact-grid p{
+    font-size: 2vmax;
+    color: #414042;
+    padding-left: 15px;
+    font-family: aveBook;
+    text-align: left;
+}
+
+.congrid-setting{
+    display: flex;
+    align-items: center;
+}
+
+.congrid-setting img{
+    height: 2vmax;
+}
+
+.address-section{
+    display: flex;
+}
+
+/* CONTACT MAIN WEB END*/
+
+@media only screen and (max-width: 500px){
+
+/* ABOUT MOB */
+
+.aboutmain-bg{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/mob/homemob.png");
+    background-size: cover;
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
+
+.aboutmain-container{
+    width: 90%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0%;
+    position: absolute;
+    top: 40%;
+}
+
+.aboutmaintext-container{
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.aboutmaintext-container p{
+    font-family: aveMed;
+    color: #f0e04d;
+    font-size: 2.5vmax;
+}
+
+/* PRODUCT MOB */
+
+.productmain-bg{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/mob/prodmob.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: top;
+    position: relative;
+    display: flex;
+}
+
+.productmaincontent-container{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 20%;
+    align-self: center;
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+}
+
+.productmain-text{
+    height: 20%;
+    display: none;
+}
+
+/* SERVICES MOB */
+
+.services-bg{
+    background-image: url("../img/mob/servicesmob.png");
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    display: flex ;
+    justify-content: center;
+    position: relative;
+}
+
+.stb-container{
+    height: 25%;
+    width: 90%;
+    align-self: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.servicetext-container h1{
+    color: #414042;
+    font-family: medoblq;
+    text-align: center;
+    font-size: 2.5vmax;
+    word-spacing: 5px;
+}
+
+.sertexmob1{
+    display: none;
+}
+
+.sertexmob2{
+    display: block;
+}
+
+/* EVENTS MOB */
+
+.event-bg{
+    height: 100vh;
+    width: 100%;
+    background-image: url("../img/mob/eventmob.png");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.etb-container{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 25%;
+    align-self: center;
+    justify-content: center;
+}
+
+.et{
+    display: flex;
+    justify-content: center;
+}
+
+.et h1{
+    text-align: center;
+    color: #1c4e7e;
+    font-family: medoblq;
+    letter-spacing: 5px;
+    height: max-content;
+    font-size: 2.5vmax;
+    font-weight: lighter;
+}
+
+/* CONTACT MOB */
+
+.contact-container{
+    background-image: url("../img/mob/aboutUsmob.png ");
+    background-size:cover;
+    background-repeat: no-repeat;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+}
+
+.contactgrid-container{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 35%;
+    align-self: center;
+}
+
+}

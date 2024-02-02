@@ -1,0 +1,433 @@
+@charset "UTF-8";
+
+@font-face{
+	src: url("../fonts/Avenir-BlackOblique-04.ttf");
+	font-family: blackoblq;
+}
+
+@font-face{
+    src: url("../fonts/AvenirNext-Medium-06.ttf");
+    font-family:aveMed;
+}
+
+@font-face{
+    src: url("../fonts/AvenirNext-Regular-08.ttf");
+    font-family:aveReg;
+}
+
+@font-face{
+    src: url("../fonts/Avenir-Book-01.ttf");
+    font-family: aveBook;
+}
+
+@font-face{
+    src: url("../fonts/Avenir-MediumOblique-10.ttf");
+    font-family: medoblq;
+}
+
+a[href^=tel] {
+    text-decoration:inherit;
+    color: inherit;
+ }
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.modal img{
+    position: absolute;
+    cursor: pointer;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 50px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+}
+
+.modal-content h1{
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: aveMed;
+    font-size: 6vmax;
+}
+
+.modal-content {
+    position: relative;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    top: 10%;
+    width: 90%;
+    height: 80%;
+}
+
+.mform{
+    display: flex;
+    flex-direction: column;
+    width: 80%;align-self: center;
+    width: 75%;
+    height: 75%;
+}
+
+.label1{
+    background-color: #F0E04D;
+    margin-top: 3%;
+    width: 100%;
+    height: 4vmax;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.label1 input{
+    width: 100%;
+    background-color: #F0E04D;
+    border: none;
+    text-align: left;
+    font-size: 2vmax;
+    margin-left: 10px;
+}
+
+.label1 input:focus{
+    outline: none;
+}
+
+.label1 label{
+    font-family: aveReg;
+    font-size: 2vmax;
+}
+
+.label2{
+    background-color: #F0E04D;
+    margin-top: 3%;
+    width: 100%;
+    height: 10vmax;
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.label2 textarea{
+    width: 100%;
+    background-color: #F0E04D;
+    border: none;
+    vertical-align: top;
+    font-size: 1.5vmax;
+    margin-left: 10px;
+}
+
+.label2 textarea:focus{
+    outline: none;
+}
+
+.label2 label{
+    font-family: aveReg;
+    font-size: 2vmax;
+}
+
+.mform-submit{
+    width: 10vmax;
+    height: 3vmax;
+    margin:auto;
+    cursor: pointer;
+    background-color: white;
+    color: #1c4e7e;
+    font-size: 1.5vmax;
+    font-family: blackoblq;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mform-submit:hover{
+    background-color: #1c4e7e;
+    color: #F0E04D;
+}
+
+.modal-content2{
+    position: relative;
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    top: 10%;
+    width: 90%;
+    height: 80%;
+}
+
+.typewriter{
+    width: fit-content;
+    align-self: center;
+}
+
+.typewriter h1{
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: aveMed;
+    font-size: 6vmax;
+}
+
+.modal-content2 p{
+    color: white;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: aveMed;
+    font-size: 6vmax;
+    overflow: hidden;
+    border-right: .15em solid #1c4e7e;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation:
+    typing 2.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0}
+    to { width: 90% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: #1c4e7e; }
+}
+  
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {bottom:-300px; opacity:0} 
+    to {bottom:0; opacity:1}
+  }
+  
+  @keyframes animatetop {
+    from {bottom:-300px; opacity:0}
+    to {bottom:0; opacity:1}
+  }
+  
+  /* The Close Button */
+  .close {
+    position: absolute;
+    left: 25px;
+    top: 40px;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+
+
+
+/* DESKTOP PRODUCT-SUB PAGE */
+
+.back-container{
+    display: flex;
+    align-items: center;
+    width: 12vmax;
+    height: fit-content;
+    position: absolute;
+    float:left;
+    top: 40px;
+    left: 20px;
+    justify-content:space-evenly;
+    cursor: pointer;
+}
+
+.back-container h1{
+    font-family: aveBook;
+    color: #1c4e7e;
+    font-weight: lighter;
+    font-size: 2.5vmax;
+}
+
+.back-container img{
+    height: 5vmax;
+}
+
+.back-container h1:hover{
+    color: white;
+}
+
+.servicesub-bg1{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/servicesub-bg1.png");
+    background-size: cover;
+    display: flex;
+    position: relative;
+}
+
+.servicesubgrid-container{
+    width: 50%;
+    height: 70%;
+    align-self: center;
+    margin-left: 40px;
+}
+
+.servicesub-grid{
+    display: grid;
+    grid-template-rows: 15% 15% 45% 15% 10%;
+    height: 100%;
+}
+
+.servicesub-wwd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicesub-grid h1{
+    font-family: blackoblq;
+    color: #1c4e7e;
+    font-size: 3.5vmax;
+}
+
+.servicesub-madd{
+    display: flex;
+    align-items: center;
+}
+
+.servicesub-grid h2{
+    font-family: aveMed;
+    color: #1c4e7e;
+    font-size: 2.5vmax;
+    margin-left: 40px;
+}
+
+.servicesub-list{
+    display: flex;
+    align-items: center;
+}
+
+.servicesub-grid p{
+    font-family: aveBook;
+    font-size: 1.5vmax;
+    margin-left: 40px;
+}
+
+.servicesub-grid h3{
+    font-family: medoblq;
+    color: #1c4e7e;
+    margin-left: 40px;
+    font-size: 2.5vmax;
+}
+
+.servicesub-buttoncontainer{
+    display: flex;
+}
+
+.servicesub-button{
+    background-color: #1c4e7e;
+    color: #F0E04D;
+    font-family: blackoblq;
+    margin-left: 40px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 10.5vmax;
+    font-size: 1.5vmax;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.servicesub-button:hover{
+    color: #1c4e7e;
+    background-color: white;
+}
+
+.servicesub-bg2{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/servicesub-bg2.png");
+    background-size: cover;
+    display: flex;
+    position: relative;
+}
+
+.servicesubgrid-container2{
+    height: 40%;
+    width: 42%;
+    align-self: center;
+    position: absolute;
+    right: 5%;
+    display: flex;
+}
+
+.servicesub-grid2{
+    display: grid;
+    grid-template-rows: 20% 50% 20% 10%;
+    width: 100%;
+}
+
+.servicesub-wdd{
+    display: flex;
+}
+
+.servicesub-grid2 h1{
+    color: #1c4e7e;
+    font-family: aveMed;
+    font-size: 2.5vmax;
+}
+
+.servicesub-list2{
+    display: flex;
+    align-items: center;
+}
+
+.servicesub-grid2 p{
+    font-family: aveBook;
+    font-size: 1.5vmax;
+}
+
+.servicesub-grid2 h3{
+    color: #1c4e7e;
+    font-family: medoblq;
+    font-size: 2.5vmax;
+}
+
+.servicesub-button2{
+    background-color: #1c4e7e;
+    color: #F0E04D;
+    font-family: blackoblq;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 10.5vmax;
+    font-size: 1.5vmax;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.servicesub-button2:hover{
+    color: #1c4e7e;
+    background-color: white;
+}

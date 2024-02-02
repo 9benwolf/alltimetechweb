@@ -1,0 +1,178 @@
+@charset "UTF-8";
+
+@font-face{
+	src: url("../fonts/Avenir-BlackOblique-04.ttf");
+	font-family: blackoblq;
+}
+
+@font-face{
+    src: url("../fonts/Avenir-Medium-09.ttf");
+    font-family:aveMed;
+}
+
+a[href^=tel] {
+    text-decoration:inherit;
+    color: inherit;
+ }
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    overflow-x: hidden;
+    position: relative;
+    width: 100%;
+}
+
+
+/* DESKTOP PRODUCT-SUB PAGE */
+
+.prodsub-bg{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/prodSub.png");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.prodsub-bg a{
+    text-decoration: none;
+}
+
+.back-container{
+    display: flex;
+    align-items: center;
+    width: 12vmax;
+    height: fit-content;
+    position: absolute;
+    float:left;
+    top: 40px;
+    left: 20px;
+    justify-content:space-evenly;
+    cursor: pointer;
+}
+
+.back-container h1{
+    font-family: aveBook;
+    color: #1c4e7e;
+    font-weight: lighter;
+    font-size: 2.5vmax;
+}
+
+.back-container img{
+    height: 5vmax;
+}
+
+.back-container h1:hover{
+    color: #F0E04D;
+}
+
+.prodsub-container{
+    height: 50%;
+    width: 90%;
+    display: flex;
+}
+
+.prodsub-left{
+    flex: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.prodsubleft-a{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.prodsubleft-a img{
+    height: 14vmax;
+    align-self: center;
+}
+
+.prodsubleft-b{
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.prodsubleft-b img{
+    height: 4vmax;
+    cursor: pointer;
+}
+
+.prodsubleftb-a, .prodsubleftb-b{
+    width: 35%;
+    display: flex;
+    align-items: center;
+}
+
+.prodsubleftb-a {
+    justify-content: flex-end;
+}
+
+.prodsub-right{
+    display: flex;
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.prodsubtext-container p{
+    color: #1c4f7e;
+    font-family: aveMed;
+    font-size: 2vmax;
+    text-align: center;
+}
+
+.prodsubvisit-button{
+    position: absolute;
+    bottom: 1vmax;
+    display: flex;
+    background-color: #1c4e7e;
+    color: #F0E04D;
+    font-family: blackoblq;
+    width: 10vmax;
+    height: 3vmax;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.prodsubvisit-button span{
+    font-size: 1.1vmax;
+}
+
+.prodsubvisit-button:hover{
+    background-color: #F0E04D;
+    color: #1c4e7e;
+}
+@media screen and (max-width: 516px){
+.prodsub-bg{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/mob/aboutUsmob.png");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.prodsub-container{
+    height: 50%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+}
