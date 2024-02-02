@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name=”format-detection” content=”telephone=no”>
+<meta charset="UTF-8">
+<title>Alltime Tech Solutions Inc</title>
+<link rel="stylesheet" href="css/serviceSubsuccess.css">  
+<link rel="icon" href="#">
+<script>
+    document.querySelector("meta[name=viewport]").setAttribute('content', 'width=device-width, initial-scale='+(1/window.devicePixelRatio));
+</script>
+</head>
+<body>
+
+    <div class="servicesub-bg1">
+
+        <div id="myModal" class="modal">
+    
+            <img src="img/button/Group 459.png" class="close" alt="">
+    
+        <div class="modal-content">
+            <h1>Let us know what you need</h1>
+    
+            <form class="mform" action="includes/newAdd.inc.php" method="post" onsubmit="return thankyou()">
+                
+                <div class="label1">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="userName">
+                </div>
+    
+                <div class="label1">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="emailAdd">
+                </div>
+    
+                <div class="label2">
+                    <label for="message">Message:</label>
+                    <textarea name="userMessage" id="message" cols="30" rows="10"></textarea>
+                </div>
+                <button class="mform-submit" id="myBtn3" method="post"> SUBMIT
+                </button>
+              </form>
+    
+          </div>
+    
+          <div class="modal-content2">
+            <div class="typewriter">
+                <h1>Thank you for submitting <br></h1>
+            </div>
+            <p>We'll get back to you soon!</p>
+    
+          </div>
+    
+        </div>
+    
+        <div onclick="valueSender()" class="back-container">
+            <img src="img/button/Group 460.png" alt="">
+    
+            <h1>Back</h1>
+        </div>
+    
+    <div class="servicesubgrid-container">
+    
+        <div class="servicesub-grid">
+    
+            <div class="servicesub-wwd">
+                <h1>What We Do</h1>
+            </div>
+            <div class="servicesub-madd">
+                <h2>Mobile App Design and Development</h2>
+            </div>
+    
+            <div class="servicesub-list">
+                <p>-User Interface (UI) and User Experience design(UX)<br>
+                -Database server, security and APK<br>
+                -Build branding for your app <br>
+                -Google playstore console and appstore connect integration<br>
+                -Manage and maintain your app <br>
+                -Google analytics set-up
+            </p>
+            </div>
+    
+            <h3>Starts at P1,500,000</h3>
+    
+            <div class="servicesub-buttoncontainer">
+                <div id="myBtn" class="servicesub-button">
+                    <span>Inquire Now</span>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+    
+    </div>
+    
+    <div class="servicesub-bg2">
+        <div class="servicesubgrid-container2">
+            <div class="servicesub-grid2">
+                <div class="servicesub-wdd">
+                    <h1>Web Design and Development</h1>
+                </div>
+    
+                <div class="servicesub-list2">
+                     <p>-User Interface (UI) and User Experience Design (UX)<br>
+                    -Graphic Assets<br>
+                    -Google Analytics integration</p>
+                </div>
+    
+                <h3>Starts at P50,000</h3>
+    
+                <div class="servicesub-buttoncontainer">
+                    <div id="myBtn2" class="servicesub-button2">
+                        <span>Inquire Now</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    var modal = document.getElementById("myModal");
+    var btn = document.getElementById("myBtn");
+    var btn2 = document.getElementById("myBtn2");
+    var span = document.getElementsByClassName("close")[0]; 
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+    btn2.onclick = function() {
+      modal.style.display = "block";
+    }
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+</script>
+
+<!-- SUBMIT -->
+<script>
+        var modal = document.getElementById("myModal");
+        var btn3 = document.getElementById("myBtn3");
+        var mcont1 = document.getElementsByClassName("modal-content")[0];
+        var mcont2 = document.getElementsByClassName("modal-content2")[0];
+
+         function thankyou(){
+            mcont1.style.display = "none";
+            mcont2.style.display = "flex";
+            setTimeout(
+                function(){
+                    modal.style.display = "none";
+                }, 4000);
+            
+        }
+    
+</script>
+
+<script>
+    function valueSender(){
+    var a=2;
+    localStorage.setItem("myValue", a);
+    window.location.href="index.html";
+    }
+</script>
+
+</body>
+</html>

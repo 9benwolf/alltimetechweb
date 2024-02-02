@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name=”format-detection” content=”telephone=no”>
+<meta charset="UTF-8">
+<title>Alltime Tech Solutions Inc</title>
+<link rel="stylesheet" href="css/productSub.css">  
+<link rel="icon" href="#">
+<script>
+    document.querySelector("meta[name=viewport]").setAttribute('content', 'width=device-width, initial-scale='+(1/window.devicePixelRatio));
+</script>
+</head>
+<body>
+
+<div class="prodsub-bg">
+
+    <div onclick="valueSender()" class="back-container">
+        <img src="img/button/Group 459.png" alt="">
+
+        <h1>Back</h1>
+    </div>
+
+    <div class="prodsub-container">
+        <div class="prodsub-left">
+
+            <div class="prodsubleft-a">
+                <img src="img/icons/wetapprod.png" alt="">
+            </div>
+
+            <div class="prodsubleft-b">
+                <div class="prodsubleftb-a">
+                    <img src="img/icons/gplay.png" alt="" onClick="location.href='https://play.google.com/store/apps/details?id=com.alltimetechsol.etap';">
+                </div>
+                <div class="prodsubleftb-b">
+                    <img src="img/icons/appstore.png" alt="" onClick="location.href='https://apps.apple.com/ph/app/wetap-ph/id1501783382';">
+                </div>
+            </div>
+
+        </div>
+
+        <div class="prodsub-right">
+            <div class="prodsubtext-container">
+                <p>WeTap—Home of Service Providers is an<br> Online Booking Mobile App where users can<br> search, select, and book service providers and<br> aims to help our fellow Filipinos find new job<br> opportunities.</p>
+            </div>
+            <div class="prodsubvisit-button" onClick="location.href='https://wetap.ph';">
+                <span>VISIT SITE</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function valueSender(){
+    var a=1;
+    localStorage.setItem("myValue", a);
+    window.location.href="index.html";
+    }
+</script>
+
+</body>
+</html>

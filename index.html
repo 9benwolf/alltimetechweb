@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alltimetech Solutions Inc.</title>
+        <link rel="stylesheet" href="css/indexStyle.css">
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    </head>
+    <body>
+        <div class="content">
+            <div class="images">
+
+                <div id="menu-bar">
+                    <div id="menu" onclick="menu()">
+                        <div id="bar1" class="bar"></div>
+                        <div id="bar2" class="bar"></div>
+                        <div id="bar3" class="bar"></div>
+                    </div>
+                    <ul class="navigation" id="navigation">
+                        <li><a id="home" href="#">Home</a></li>
+                        <li><a id="product" href="#">Product</a></li>
+                        <li><a id="services"href="#">Services</a></li>
+                        <li><a id="events" href="#">Events</a></li>
+                        <li><a id="contact" href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            
+                <div class="menu-bg" id="menu-bg">
+            
+                </div>
+
+                <nav>
+
+                    <div class="att-logo">
+                        <img src="img/icons/alltimelogo.png" alt="">
+                    </div>
+
+                    <div class="aboutmain-bg">
+                    
+                        <div class="aboutmain-container">
+                            <div class="aboutmaintext-container">
+                                <p>We design, develop and manage.<br>
+                               <b>We help improve lives.</b></p>
+                            </div>
+                    
+                            <div class="aboutmainbutton-container">
+                                <a href="aboutUs.html" class="aboutmain-button">
+                                    <span>ABOUT US</span>
+                                </a>
+                            </div>
+                    
+                        </div>
+                    </div>
+                </nav>
+
+                <nav id="productmain">
+                    <div class="productmain-bg">
+
+                        <div class="atlogo-productmain">
+                            <img src="img/icons/alltimelogo.png" alt="">
+                        </div>
+                    
+                        <div class="productmaincontent-container">
+                    
+                            <div class="productmain-text">
+                                <h1>SEARCH. SELECT. I-BOOK MO NA!</h1>
+                            </div>
+                    
+                            <div class="productmain-welogo">
+                                <img src="img/icons/wetapwhite.png" alt="">
+                            </div>
+                    
+                            <div class="productmainbutton-container">
+                                <a href="productSub.html" class="productmain-button">
+                                    <span>PRODUCT</span>
+                                </a>
+                            </div>
+                    
+                        </div>
+                    
+                    </div>
+                </nav>
+
+                <nav>
+
+                    <div class="attblacklogo">
+                        <img src="img/icons/attblack.png" alt="">
+                    </div>
+
+                    <div class="services-bg">
+
+                        <div class="attblacklogo">
+                            <img src="img/icons/attblack.png" alt="">
+                        </div>
+                        <div class="stb-container">
+                            <div class="servicetext-container">
+                                <h1 class="sertexmob1">We collaborate with our clients, strategize,<br> execute, and measure.</h1>
+
+                                <h1 class="sertexmob2">We collaborate with our clients, strategize, execute, and measure.</h1>
+                            </div>
+                            <div class="servicebutton-container">
+                                <a href="serviceSub.html" class="service-button"><span>SERVICES</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+                <nav>
+
+                    <div class="attblacklogo">
+                        <img src="img/icons/attblack.png" alt="">
+                    </div>
+
+                    <div class="event-bg">
+
+                        <div class="etb-container">
+                            <div class="et">
+                                <h1>Every achievement, small or big, we celebrate!</h1>
+                            </div>
+                            <div class="button-container">
+                                <a href="eventSub.html" class="event-button"><span>EVENTS</span></a>           
+                            </div>
+                        </div>
+                    
+                    </div>
+                </nav>
+
+                <nav>
+
+                    <div class="attblacklogo">
+                        <img src="img/icons/attblack.png" alt="">
+                    </div>
+
+                    <div class="contact-container">
+
+                        <div class="contactgrid-container">
+                            <div class="title-container">
+                                <h1>Contact Us</h1>
+                            </div>
+                
+                            <div class="congrid-section">
+                                <div class="contact-grid">
+                                    <div class="congrid-setting">
+                                        <img src="img/icons/mail.png" alt="">
+                                        <p>info@alltimetechsol.com</p>
+                                    </div>
+                                    <div class="congrid-setting">
+                                        <img src="img/icons/phone.png" alt="">
+                                        <p>(02) 83625499</p>
+                                    </div>
+                                    <div class="congrid-setting">
+                                        <div class="address-section">
+                                        <img src="img/icons/locpin.png" alt="">
+                                        <p>331 Aguirre Ave., 2F Juliana<br>
+                                        Bldg, BF Homes, Parañaque City, 1720</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                
+                        </div>
+                
+                    </div>
+                </nav>
+                
+            </div>
+
+            <div onclick="side_slide(-1)" class="slide left">
+                <span class="fas fa-angle-left"></span>
+            </div>
+
+            <div onclick="side_slide(1)" class="slide right">
+                <span class="fas fa-angle-right"></span>
+            </div>
+
+            <div class="btn-sliders">
+                <span class="slidercolor" onclick="btn_slide(1)"></span>
+                <span class="slidercolor" onclick="btn_slide(2)"></span>
+                <span class="slidercolor" onclick="btn_slide(3)"></span>
+                <span class="slidercolor" onclick="btn_slide(4)"></span>
+                <span class="slidercolor" onclick="btn_slide(5)"></span>
+            </div>
+        </div>       
+
+        <script>
+             var b = localStorage.getItem("myValue");
+             var a = parseInt(b);
+             var c =+ 1;
+             var c = a + 1;
+             var resetValue = 0;
+             localStorage.setItem("myValue", resetValue);
+            var indexValue = c;
+            showImg(indexValue);
+            function btn_slide(e){showImg(indexValue = e);}
+            function side_slide(e){showImg(indexValue += e);}
+            function showImg(e){
+                var i;
+                const nav = document.querySelectorAll('nav');
+                const sliders = document.querySelectorAll('.btn-sliders span');
+                const arrow = document.querySelectorAll('.slide');
+                const arrowspan = document.querySelectorAll('.slide span');
+                const bar = document.querySelectorAll('.bar');
+                const menu = document.getElementById('menu');
+                if(e > nav.length){indexValue = 1}
+                if (e < 1){indexValue = nav.length}
+                for (i = 0; i < nav.length; i++){
+                    nav[i].style.display = "none";
+                }
+                for (i = 0; i < sliders.length; i++){
+                    sliders[i].style.background = "rgba(255,255,255,0.1)";
+                }
+                
+                
+                nav[indexValue-1].style.display = "block";
+                sliders[indexValue-1].style.background = "#F0E04E";
+
+                
+
+                if (indexValue > 2){
+                    sliders[indexValue-1].style.background = "#1c4e7e";
+                    arrow[0].style.border = "2px solid #1c4e7e";
+                    arrow[1].style.border = "2px solid #1c4e7e";
+                    arrowspan[0].style.color = "#1c4e7e";
+                    arrowspan[1].style.color = "#1c4e7e";
+                    sliders[0].style.border = "2px solid #1c4e7e";
+                    sliders[1].style.border = "2px solid #1c4e7e";
+                    sliders[2].style.border = "2px solid #1c4e7e";
+                    sliders[3].style.border = "2px solid #1c4e7e";
+                    sliders[4].style.border = "2px solid #1c4e7e";
+                    bar[0].style.background = "#1c4e7e";
+                    bar[1].style.background ="#1c4e7e";
+                    bar[2].style.background ="#1c4e7e";
+                }
+                else{
+                    arrow[0].style.border = "2px solid #F0E04E";
+                    arrow[1].style.border = "2px solid #F0E04E";
+                    arrowspan[0].style.color = "#F0E04E";
+                    arrowspan[1].style.color = "#F0E04E";
+                    sliders[0].style.border = "2px solid #F0E04E";
+                    sliders[1].style.border = "2px solid #F0E04E";
+                    sliders[2].style.border = "2px solid #F0E04E";
+                    sliders[3].style.border = "2px solid #F0E04E";
+                    sliders[4].style.border = "2px solid #F0E04E";
+                    bar[0].style.background = "white";
+                    bar[1].style.background ="white";
+                    bar[2].style.background ="white"; 
+                }
+            }
+        </script>
+
+<script src="script.js"></script>
+        
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name=”format-detection” content=”telephone=no”>
+<meta charset="UTF-8">
+<title>Alltime Tech Solutions Inc</title>
+<link rel="stylesheet" href="css/eventSub.css">  
+<link rel="icon" href="#">
+<script>
+    document.querySelector("meta[name=viewport]").setAttribute('content', 'width=device-width, initial-scale='+(1/window.devicePixelRatio));
+</script>
+</head>
+<body>
+
+<div class="eventsub-bg">
+
+    <div onclick="valueSender()" class="back-container">
+        <img src="img/button/Group 459.png" alt="">
+
+        <h1>Back</h1>
+    </div>
+
+</div>    
+
+<script>
+    function valueSender(){
+    var a=3;
+    localStorage.setItem("myValue", a);
+    window.location.href="index.html";
+    }
+</script>
+
+</body>
+</html>
